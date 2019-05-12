@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import {DataSearch, ReactiveBase, ReactiveList} from '@appbaseio/reactivesearch';
+import { DataSearch, ReactiveBase, ReactiveList } from '@appbaseio/reactivesearch';
 
 import Result from './result';
 
@@ -24,6 +24,7 @@ class App extends Component {
   }
 
   render() {
+    const { searchQuery } = this.state;
     return (
       <Container fluid>
         <ReactiveBase app="amplyfi" url={process.env.REACT_APP_SEARCH_API}>
@@ -39,7 +40,7 @@ class App extends Component {
                   'm_Places',
                   'm_TriGrams',
                 ]}
-                value={this.state.searchQuery}
+                value={searchQuery}
                 onChange={this.searchChange}
                 debounce={200}
               />
@@ -48,7 +49,7 @@ class App extends Component {
               Amplyfi Article Search
             </Col>
           </Row>
-          {this.state.searchQuery.length > 0 && (
+          {searchQuery.length > 0 && (
             <Row>
               <Col>
                 <ReactiveList
