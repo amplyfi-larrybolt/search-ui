@@ -1,0 +1,15 @@
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'build']
+
+- name: 'gcr.io/$PROJECT_ID/firebase'
+  args: ['deploy']
+  secretEnv: ['FIREBASE_TOKEN']
+
+secrets:
+- kmsKeyName: 'projects/larry-boltovskoi/locations/global/keyRings/cloudbuilder/cryptoKeys/firebase-token'
+  secretEnv:
+    FIREBASE_TOKEN: 'CiQAqQxOBUj8bG0dsBSCP3gzT6y0rMOPTWZfmKlz47Tqv3t5xH8SIQA+mNGdf3Qu1x0HEUbhRt2bpXcKczqgbZdroVkgP89urQ=='
