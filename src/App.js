@@ -14,7 +14,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchQuery: '',
+      searchQuery: new URLSearchParams(window.location.search).get('search') || '',
     };
     this.searchChange = this.searchChange.bind(this);
   }
