@@ -48,8 +48,8 @@ class App extends Component {
                 debounce={200}
               />
             </Col>
-            <Col sm={3}>
-              Amplyfi Article Search
+            <Col sm={3} className="main-title">
+              AMPLYFI Search
             </Col>
           </Row>
           <Row>
