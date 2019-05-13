@@ -4,6 +4,8 @@ steps:
 
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'build']
+  env:
+  - 'REACT_APP_SEARCH_API=http://amplyfi-search-api.gcp.lry.be:9200/'
 
 - name: 'gcr.io/$PROJECT_ID/firebase'
   args: ['deploy']
