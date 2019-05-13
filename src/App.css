@@ -1,9 +1,27 @@
 .container-fluid {
-    margin-top: 2em;
+  margin-top: 2em;
 }
 .link {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
+  box-shadow: 0 0 10px #efefef;
+  padding: .2em .4em;
+  background: white;
 }
 .title {
-    margin-bottom: -.4em;
+  margin-bottom: -.4em;
+}
+.meta .badge {
+  margin-right: .4em;
+}
+.meta small {
+  margin-right: .4em;
+}
+.filters > div {
+  background: white;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid blue;
+}
+.search input {
+  font-size: 1.2em;
 }

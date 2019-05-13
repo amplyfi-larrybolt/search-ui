@@ -63,6 +63,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
+#### Firebase and cloudbuild
+```bash
+git clone https://github.com/GoogleCloudPlatform/cloud-builders-community
+cd cloud-builders-community/firebase
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+gcloud builds submit --config cloudbuild.yaml .
+# this will create gcr.io/$PROJECT_ID/firebase
+```
